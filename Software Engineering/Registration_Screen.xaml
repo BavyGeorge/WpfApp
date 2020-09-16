@@ -1,0 +1,68 @@
+﻿<Page x:Class="Software_Engineering.Registration_Screen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Software_Engineering"
+        mc:Ignorable="d"
+        Title="Registration_Screen" Height="625" Width="1200" WindowHeight="625" WindowTitle="REGISTRATION SCREEN" WindowWidth="1200">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid Height="625" Width="1200">
+            <Grid.Background>
+                <ImageBrush ImageSource="snow1.jpg"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="50"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="45"/>
+                <RowDefinition Height ="55"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column ="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" >
+                <Label Content="REGISTRATION" Foreground="Black" FontSize="36" FontFamily="Showcard Gothic" Margin="0,0,0,0"  VerticalAlignment ="Center"/>
+            </StackPanel>
+
+            <Label  Grid.Row="1" Grid.Column="0" Content="Username:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox x:Name="tbxUsername" Grid.Row="1" Grid.Column="1"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+
+            <Label  Grid.Row="2" Grid.Column="0" Content="First Name:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox x:Name="tbxFirst" Grid.Row="2" Grid.Column="1"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Last Name:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbxLast"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Password:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <PasswordBox Grid.Row="4" Grid.Column="1" x:Name="pbxPassword" Width="200" Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxShownRegister" Width="200" Margin="0,0,300,0" Height="30" FontSize="24" HorizontalAlignment="Right" Visibility="Collapsed" TextChanged="TextBoxShownRegister_TextChanged"/>
+            <CheckBox x:Name="CheckBoxShowPasswordRegister" Grid.Row="4" Grid.Column="1" Margin="320,0,0,0" Height="30" Content="Show Password" FontSize="24" Checked="ShowPasswordCheckedRegisterScreen" Unchecked="ShowPasswordUncheckedRegisterScreen"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Date of Birth:" Margin="400,0,0,0" Foreground="Black"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <DatePicker Grid.Row="5" Grid.Column="1" x:Name="dpAge" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="20"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="Gender:" Margin="400,0,0,0" Foreground="Black"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <ComboBox Grid.Row="6" Grid.Column="1" x:Name="tbxGender" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="22">
+                <ComboBoxItem Content="Male"></ComboBoxItem>
+                <ComboBoxItem Content="Female"></ComboBoxItem>
+            </ComboBox>
+            <Label Grid.Row="7" Grid.Column="0" Content="Weight:" Foreground="Black" Margin="400,0,0,0"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="7" Grid.Column="1" x:Name="tbxWeight" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="8" Grid.Column="0" Content="Height:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="8" Grid.Column="1" x:Name="tbxHeight" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="9" Grid.Column="0" Content="Ethnicity:" Margin="400,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="9" Grid.Column="1" x:Name="tbxEthnicity" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+
+            <Label  Grid.Row="10" Grid.Column="0" Content="Existing Medical Condition:" Margin="300,0,0,0" Foreground="Black"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="10" Grid.Column="1" x:Name="tbxMedical" Width="200"  Margin="0,0,300,0" Height="30"  HorizontalAlignment="Right" FontSize="24"/>
+            <Button Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" Content="SAVE" Width="200"  Margin="0,0,0,0" FontSize="36" Background="#FF1EF0DC" Height="50" Click="SaveButton"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

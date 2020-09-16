@@ -1,0 +1,4 @@
+﻿EXEC CreateTables
+EXEC Bulk_Insert_DATA_AP
+EXEC Bulk_Insert_DATA_FT
+EXEC Bulk_Insert_INGREDIENT_FT

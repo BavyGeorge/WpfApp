@@ -1,0 +1,62 @@
+﻿<Page x:Class="Software_Engineering.AddNewFood"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Software_Engineering"
+      mc:Ignorable="d" 
+      d:DesignHeight="625" d:DesignWidth="1200"
+      Title="AddNewFood" WindowHeight="675" WindowWidth="1200">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid Height="625" Width="1200">
+            <Grid.Background>
+                <ImageBrush ImageSource="snow.jpg"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="50"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                <RowDefinition Height ="60"/>
+                
+                <RowDefinition Height ="80"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column ="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" >
+                <Label Content="ADD NEW FOOD" Foreground="Black" FontSize="36" FontFamily="Showcard Gothic" Margin="0,0,0,0"  VerticalAlignment ="Center"/>
+            </StackPanel>
+
+            <Label  Grid.Row="1" Grid.Column="0" Content="Food Name:" Margin="350,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox x:Name="tbxFoodName" Grid.Row="1" Grid.Column="1"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+
+            <Label  Grid.Row="2" Grid.Column="0" Content="Energy(kJ):" Margin="350,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox x:Name="tbxEnergy" Grid.Row="2" Grid.Column="1"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Fat(saturated)(grams):" Margin="350,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbxSatFat"  Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Fat(Total)(grams):" Margin="350,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbxTotalFat" Width="200" Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxShownRegister" Width="200" Margin="0,0,300,0" Height="30" FontSize="24" HorizontalAlignment="Right" Visibility="Collapsed"/>
+            
+            <Label Grid.Row="5" Grid.Column="0" Content="Protein(grams):" Margin="350,0,0,0" Foreground="Black"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="tbxProtein" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="20"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="Sugar(Total)(grams):" Margin="350,0,0,0" Foreground="Black"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="tbxSugars" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="22">
+                
+            </TextBox>
+            <Label Grid.Row="7" Grid.Column="0" Content="Fibre(grams):" Foreground="Black" Margin="350,0,0,0"  VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="7" Grid.Column="1" x:Name="tbxFibres" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            <Label Grid.Row="8" Grid.Column="0" Content="Carbohydrates(grams):" Margin="350,0,0,0" Foreground="Black" VerticalAlignment ="Center" HorizontalAlignment="Left" FontSize="24"/>
+            <TextBox  Grid.Row="8" Grid.Column="1" x:Name="tbxCarbohydrates" Width="200"  Margin="0,0,300,0" Height="30" HorizontalAlignment="Right" FontSize="24"/>
+            
+            <Button Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" Content="SAVE" Width="200"  Margin="0,0,0,0" FontSize="36" Background="#FF1EF0DC" Height="50" Click="SaveFoodButton"/>
+        </Grid>
+    </ScrollViewer>
+</Page>
